@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Macondo+Swash+Caps|Orbitron|Permanent+Marker|Satisfy|Questrial"
+    rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+
+        body {
+        /* BLUE CLOUDS */
+        background: url('https://i.imgur.com/WujJT1P.jpg') fixed center;
+        /* PINK CLOUDS */
+        /* background: url('https://i.imgur.com/mPMoBtP.jpg?1'); */
+        /* LIGHT BCKGRND CLOUDS */
+        /* background: url('https://i.imgur.com/q62LQER.png'); */
+        /* TAN KITES */
+        /* background: url('https://i.imgur.com/SZWp6of.png') fixed center; */
+        /* BLUE AND PINK KITES */
+        /* background: url('https://i.imgur.com/BHOBdRz.png') fixed center; */
+        /* BLUE AND WHITE KITES */
+        /* background: url('https://i.imgur.com/dM8M3XO.jpg') fixed center; */
+        background-size: cover;
+    }
+
+/*Eliminates padding, centers the thumbnail */
+
+body, html {
+padding: 0;
+margin: 0;
+text-align: center;
+}
+
+/* Styles the thumbnail */
+
+a.lightbox img {
+height: 150px;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+margin: 94px 20px 20px 20px;
+}
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+position: fixed;
+top: -100%;
+width: 100%;
+background: rgba(0,0,0,.7);
+width: 100%;
+opacity: 0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+display: block;
+width:50px;
+height:50px;
+box-sizing: border-box;
+background: white;
+color: black;
+text-decoration: none;
+position: absolute;
+top: -80px;
+right: 0;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0px;
+}
+
+
+/* <!-- Moving light boxes --> */
+
+.lightbox {
+    float: left;
+}
+
+#allKites {
+    width: 90%;
+    margin-left: 4%;
+}
+
+
+
+
+/* <!-- TOP OF PAGE STYLES --> */
+
+    #topLeft, #topCenter, #topRight {
+        float: left;
+        height: 100px;
+        margin-bottom: 2%;
+        margin-top: 1%;
+    }
+    #topLeft, #topCenter {
+        width: 30%;
+    }
+    #topRight {
+        width: 40%;
+    }
+
+    .changeLink {
+        font-family: 'Questrial', sans-serif;
+        padding: 4px;
+        border: px ridge rgb(250, 241, 192);
+        background: rgb(231, 247, 252);
+        color: rgb(49, 155, 187);
+        font-size: 20px;
+        padding: 4px;
+        /* color: rgb(182, 170, 100); */
+        text-shadow: 1px 1px gold;
+    }
+
+
+    #backArrow {
+        height: 70px;
+        float: left;
+    }
+
+
+</style>
+
+
+<body>
+
+    <center>
+    
+        <!-- LINK TO GO BACK HOME -->
+
+        <div id='topLeft' class='topRow'>
+            <a href='index.html'><img src='https://i.imgur.com/lWbu0yz.png' id='backArrow'></a>
+        </div>
+
+        <div id='topCenter' class='topRow'>
+        </div>
+
+        <div id='topRight' class='topRow'>
+            <a class='changeLink' href='kitesInflatable.html'>Inflatable</a>
+            <a class='changeLink' href='kitesBols.html'>Bols</a>
+        </div>
+
+<div id='allKites'>
+
+
+</div>
+
+    </center>
+
+</body>
+</html>
